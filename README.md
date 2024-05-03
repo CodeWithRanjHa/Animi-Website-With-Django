@@ -18,7 +18,7 @@ This is a Django-based website for streaming and viewing information about anime
 - JavaScript
 - SQLite (for development)
 - Bootstrap (for styling)
-- [Any additional libraries or tools you've used]
+
 
 ## Setup
 1. **Clone the repository:**
