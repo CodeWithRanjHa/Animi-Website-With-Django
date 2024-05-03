@@ -1,6 +1,6 @@
 # Anime Movies Website
 
-![Website Screenshot](animi_site.png)
+![Website Screenshot](/animi_site.png)
 
 ## Description
 This is a Django-based website for streaming and viewing information about anime movies. It provides a platform for users to browse through a collection of anime movies, view details about each movie, and watch them online.
