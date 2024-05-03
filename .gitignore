@@ -1,1 +1,4 @@
 .venv
+animi_site.png
+db.sqlite3
+migrations

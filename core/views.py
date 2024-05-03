@@ -9,6 +9,7 @@ def home(request):
     banners = Banners.objects.all()
     most_popular = Movie.objects.filter(status='MP')
     trending_now = Movie.objects.filter(status='TN')
+    top_rated = Movie.objects.filter(status='TR')
     side_items = Side_items.objects.all()
 
     context ={
@@ -16,6 +17,7 @@ def home(request):
         'trending_now': trending_now,
         'banners': banners, 
         'side_items': side_items,
+        'top_rated': top_rated,
     }
     return render(request, 'index.html', context)
 
