@@ -29,7 +29,7 @@ git clone https://github.com/CodeWithRanjHa/Animi-Website-With-Django.git
 2. **Navigate to the project directory:**
 
 ```bash
-  cd anime-movies-website
+  cd Animi-Website-With-Django
 ```
 
 
@@ -43,15 +43,26 @@ git clone https://github.com/CodeWithRanjHa/Animi-Website-With-Django.git
 
 4. **Run migrations:**
 
-python manage.py migrate
+```bash
+  python manage.py migrate
+```
 
 
 5. **Create a superuser (admin user):**
-python manage.py createsuperuse
+
+
+```bash
+  python manage.py createsuperuse
+```
+
 
 
 6. **Start the development server:**
-python manage.py runserver
+
+```bash
+  python manage.py runserver
+```
+
 
 
 7. **Open your web browser and navigate to [http://localhost:8000](http://localhost:8000)**
