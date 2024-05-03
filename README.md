@@ -27,11 +27,18 @@ git clone https://github.com/CodeWithRanjHa/Animi-Website-With-Django.git
 
 
 2. **Navigate to the project directory:**
-cd anime-movies-website
+
+```bash
+  cd anime-movies-website
+```
 
 
 3. **Install dependencies:**
-pip install -r requirements.txt
+
+```bash
+  pip install -r requirements.txt
+```
+
 
 
 4. **Run migrations:**
