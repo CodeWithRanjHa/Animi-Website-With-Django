@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Movie, Banners, Side_items
+from .models import Movie, Banners, Side_items, Geners
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 
@@ -45,15 +45,19 @@ def blog(request):
     return render(request, 'blog.html')
 
 
-def blog_details(request):
-    return render(request, 'blog-details.html')
+def categories(request, slug):
+    categorie = slug
+    genre = Geners.objects.get(title=slug)  # Assuming 'slug' is the title of the genre
+    movies = Movie.objects.filter(genres=genre)
+    side_items = Side_items.objects.all()
+    context = {'movies': movies, 'categorie':categorie, 'side_items': side_items}
+    return render(request, 'categories.html', context)
 
 
-
-
-def categories(request):
-    return render(request, 'categories.html')
-
+def categorie(request):
+    movies = Movie.objects.filter(category='CO')
+    context = {'movies': movies}
+    return render(request, 'categories.html', context)
 
 
 def user_login(request):

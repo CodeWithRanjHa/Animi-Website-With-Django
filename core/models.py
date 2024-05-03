@@ -13,11 +13,14 @@ class Geners(models.Model):
 
 
 class MovieCategory(models.TextChoices):
-    COMEDY = 'CO', 'Comedy'
-    DRAMA = 'DR', 'Drama'
-    ACTION = 'AC', 'Action'
-    ROMANCE = 'RO', 'Romance'
-    ADVENTURE = 'AD', 'Adventure'
+    COMEDY = 'Comedy', 'Comedy'
+    DRAMA = 'Drama', 'Drama'
+    ACTION = 'Action', 'Action'
+    ROMANCE = 'Romance', 'Romance'
+    ADVENTURE = 'Adventure', 'Adventure'
+
+
+
 
 class MovieStatus(models.TextChoices):
     TOP_RATED = 'TR', 'Top Rated'
@@ -33,7 +36,7 @@ class Movie(models.Model):
     rating = models.DecimalField(default=0, max_digits=3, decimal_places=1)
     views_count = models.IntegerField(default=0)
     status = models.CharField(choices=MovieStatus.choices, max_length=2)
-    category = models.CharField(choices=MovieCategory.choices, max_length=2)
+    category = models.CharField(choices=MovieCategory.choices, max_length=10)
     genres = models.ManyToManyField(Geners)
     new_slug = AutoSlugField(populate_from='title', unique=True, null=True, default=None)
     video = models.FileField(upload_to='videos/', null=True, blank=True)
